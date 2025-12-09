@@ -2,7 +2,6 @@ export default function ChiSiamo() {
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
-        {/* TITOLO E MISSIONE (Colonna Centrale) */}
         <div className="col-lg-8 text-center mb-5">
           <h1 className="display-4 fw-bold mb-4">
             La Nostra Storia: Passione e Qualità
