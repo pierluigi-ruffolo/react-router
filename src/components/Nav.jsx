@@ -21,7 +21,7 @@ export default function Nav() {
       {links.map((link, index) => (
         <NavLink
           key={index}
-          className="text-decoration-none text-black"
+          className="text-decoration-none text-black p-2"
           to={link.path}
         >
           {link.title}

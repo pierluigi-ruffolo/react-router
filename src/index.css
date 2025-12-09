@@ -1,5 +1,6 @@
 .active {
-  border-bottom: 3px solid black;
+  background-color: wheat;
+  border-radius: 10px;
 }
 
 body {
