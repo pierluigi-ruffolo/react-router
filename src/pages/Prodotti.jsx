@@ -17,7 +17,7 @@ export default function Prodotti() {
           return (
             <div className="col-6 mb-5 p-3" key={prodotto.id}>
               <div className="card h-100 bg-secondary-subtle">
-                <div className="p-5 text-center">
+                <div className="p-5  img-card d-flex justify-content-center align-items-center">
                   <img src={prodotto.image} alt={prodotto.title} />
                 </div>
                 <div className="card-body">
@@ -33,20 +33,4 @@ export default function Prodotti() {
       </div>
     </div>
   );
-}
-
-{
-  /*   <div className="col">
-          <div className="card">
-            <div className="card">
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">titolo</h5>
-                <p className="card-text">Categoria</p>
-                <span>descrizione</span>
-                <span>price</span>
-              </div>
-            </div>
-          </div>
-        </div> */
 }
