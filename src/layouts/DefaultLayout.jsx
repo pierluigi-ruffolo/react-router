@@ -7,7 +7,7 @@ export default function DefaultLayout() {
       <header className="p-4 d-flex justify-content-center gap-5 fs-2 bg-primary-subtle">
         <Nav />
       </header>
-      <main>
+      <main className="pt-5">
         <Outlet />
       </main>
     </>
