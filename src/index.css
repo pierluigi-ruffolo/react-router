@@ -20,6 +20,10 @@ header {
 
 .home {
   text-align: center;
-  min-height: 800px;
+  min-height: 900px;
   background-color: #e9ecef;
+  background-image: url(./assets/img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
