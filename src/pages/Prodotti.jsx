@@ -24,7 +24,7 @@ export default function Prodotti() {
                   <h5 className="card-title fs-2">{prodotto.title}</h5>
                   <p className="card-text fs-4">{prodotto.category}</p>
                   <p className="card-text fs-4">{prodotto.description}</p>
-                  <p className="card-text fs-3">Prezzo: {prodotto.price}</p>
+                  <p className="card-text fs-3">Prezzo: {prodotto.price}$</p>
                 </div>
               </div>
             </div>

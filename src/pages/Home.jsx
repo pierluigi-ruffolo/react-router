@@ -1,3 +1,7 @@
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <div className="home d-flex justify-content-center align-items-center">
+      <h1>Benvenuto nel nostro Store</h1>
+    </div>
+  );
 }
