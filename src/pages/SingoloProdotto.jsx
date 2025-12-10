@@ -16,9 +16,11 @@ export default function SingoloProdotto() {
     console.log(newId);
     navigate(`/Prodotti/${newId}`);
   }
-  /*   function precedente () {
-  
-  } */
+  function precedente() {
+    const IdpPrevious = parseInt(id) - 1;
+    console.log(IdpPrevious);
+    navigate(`/Prodotti/${IdpPrevious}`);
+  }
 
   useEffect(() => {
     axios
@@ -56,7 +58,9 @@ export default function SingoloProdotto() {
             <img src={prodotto.image} alt={prodotto.title} />
           </div>
           <div className="d-flex justify-content-between">
-            <button className="btn btn-info fs-5">Precedente</button>
+            <button onClick={precedente} className="btn btn-info fs-5">
+              Precedente
+            </button>
             <button onClick={avanti} className="btn btn-info fs-5">
               Successivo
             </button>
