@@ -8,8 +8,17 @@ export default function SingoloProdotto() {
   const [loading, setLoading] = useState(false);
 
   function OnClick() {
-    navigate(-1);
+    navigate("/Prodotti");
   }
+
+  function avanti() {
+    const newId = parseInt(id) + 1;
+    console.log(newId);
+    navigate(`/Prodotti/${newId}`);
+  }
+  /*   function precedente () {
+  
+  } */
 
   useEffect(() => {
     axios
@@ -47,10 +56,10 @@ export default function SingoloProdotto() {
             <img src={prodotto.image} alt={prodotto.title} />
           </div>
           <div className="d-flex justify-content-between">
-            <button onClick={OnClick} className="btn btn-info fs-5">
-              Precedente
+            <button className="btn btn-info fs-5">Precedente</button>
+            <button onClick={avanti} className="btn btn-info fs-5">
+              Successivo
             </button>
-            <button className="btn btn-info fs-5">Successivo</button>
           </div>
         </div>
       )}
