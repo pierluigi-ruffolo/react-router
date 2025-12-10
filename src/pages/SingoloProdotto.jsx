@@ -1,13 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 export default function SingoloProdotto() {
   const { id } = useParams();
   const [prodotto, setProdotto] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) => {
-      setProdotto(resp.data);
-      console.log(resp.data);
+      if (resp.data === "") {
+        navigate("/Prodotti");
+      } else {
+        setProdotto(resp.data);
+        console.log(resp);
+      }
     });
   }, [id]);
 
@@ -18,7 +23,7 @@ export default function SingoloProdotto() {
           <h3>{prodotto.title}</h3>
           <p>
             {prodotto.description}
-            <span class=" ms-2 badge text-bg-success">
+            <span className=" ms-2 badge text-bg-success">
               prezzo :{prodotto.price}$
             </span>
           </p>
