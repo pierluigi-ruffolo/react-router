@@ -5,9 +5,9 @@ export default function Prodotti() {
   const [prodotti, setProdotti] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(" https://fakestoreapi.com/products")
-      .then((response) => setProdotti(response.data));
+    axios.get(" https://fakestoreapi.com/products").then((response) => {
+      setProdotti(response.data);
+    });
   }, []);
 
   return (
