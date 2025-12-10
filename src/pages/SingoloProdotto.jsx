@@ -46,6 +46,12 @@ export default function SingoloProdotto() {
           <div className="d-flex justify-content-center">
             <img src={prodotto.image} alt={prodotto.title} />
           </div>
+          <div className="d-flex justify-content-between">
+            <button onClick={OnClick} className="btn btn-info fs-5">
+              Precedente
+            </button>
+            <button className="btn btn-info fs-5">Successivo</button>
+          </div>
         </div>
       )}
     </div>
